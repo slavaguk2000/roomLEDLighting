@@ -15,11 +15,12 @@ mData gr[GRAD_PERIOD];
 mData gr_less_brightness[GRAD_PERIOD];
 
 void init_gradient(){
-  mGradient< 4 > myGrad;
+  mGradient< 5 > myGrad;
   myGrad.colors[0] = mRGB(255, 255, 255);
   myGrad.colors[1] = mRGB(100, 200, 255);
   myGrad.colors[2] = mRGB(0, 0, 255);
-  myGrad.colors[3] = mRGB(255, 255, 255);
+  myGrad.colors[3] = mRGB(100, 200, 255);
+  myGrad.colors[4] = mRGB(255, 255, 255);
   for ( int i = 0; i < GRAD_PERIOD; i++){
     mData normal_brightness = myGrad.get(i, GRAD_PERIOD);
     mData less_brightness = normal_brightness;
